@@ -7,7 +7,7 @@
 
 import gymnasium as gym
 
-from .pickplace_gr1t2_mimic_withCamera_env import PickPlaceGR1T2MimicwithCameraEnv
+from .pickplace_gr1t2_mimic_withCamera_env import PickPlaceGR1T2MimicWithCameraEnv
 from .pickplace_gr1t2_mimic_withCamera_env_cfg import PickPlaceGR1T2MimicWithCameraEnvCfg
 
 gym.register(

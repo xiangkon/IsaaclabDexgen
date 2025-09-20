@@ -10,7 +10,7 @@ import isaaclab.utils.math as PoseUtils
 from isaaclab.envs import ManagerBasedRLMimicEnv
 
 
-class PickPlaceGR1T2MimicwithCameraEnv(ManagerBasedRLMimicEnv):
+class PickPlaceGR1T2MimicWithCameraEnv(ManagerBasedRLMimicEnv):
 
     def get_robot_eef_pose(self, eef_name: str, env_ids: Sequence[int] | None = None) -> torch.Tensor:
         """
