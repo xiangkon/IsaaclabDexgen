@@ -5,15 +5,18 @@
 
 """Installation script for the 'IsaaclabDexgen' python package."""
 
-import os
-import toml
 
 from setuptools import setup
 
-# Obtain the extension data from the extension.toml file
-EXTENSION_PATH = os.path.dirname(os.path.realpath(__file__))
-# Read the extension.toml file
-EXTENSION_TOML_DATA = toml.load(os.path.join(EXTENSION_PATH, "config", "extension.toml"))
+# Package metadata (hardcoded)
+PACKAGE_NAME = "IsaaclabDexgen"
+VERSION = "0.1.0"
+AUTHOR = "hdh"
+MAINTAINER = "zhiyuan"
+MAINTAINER_EMAIL = "xiangkonyue@gmail.com"
+DESCRIPTION = "Manipulation Extension Template for isaacLab"
+REPOSITORY = ""
+KEYWORDS = ["extension", "isaacLab"]
 
 # Minimum dependencies required prior to installation
 INSTALL_REQUIRES = [
@@ -23,16 +26,17 @@ INSTALL_REQUIRES = [
 
 # Installation operation
 setup(
-    name="IsaaclabDexgen",
-    packages=["IsaaclabDexgen"],
-    author=EXTENSION_TOML_DATA["package"]["author"],
-    maintainer=EXTENSION_TOML_DATA["package"]["maintainer"],
-    url=EXTENSION_TOML_DATA["package"]["repository"],
-    version=EXTENSION_TOML_DATA["package"]["version"],
-    description=EXTENSION_TOML_DATA["package"]["description"],
-    keywords=EXTENSION_TOML_DATA["package"]["keywords"],
+    # Package name and metadata
+    name=PACKAGE_NAME,
+    version=VERSION,
+    author=AUTHOR,
+    maintainer=MAINTAINER,
+    maintainer_email=MAINTAINER_EMAIL,
+    description=DESCRIPTION,
+    keywords=KEYWORDS,
+    url=REPOSITORY,
+    license="BSD-3-Clause",
     install_requires=INSTALL_REQUIRES,
-    license="Apache-2.0",
     include_package_data=True,
     python_requires=">=3.10",
     classifiers=[
