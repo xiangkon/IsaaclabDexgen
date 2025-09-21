@@ -314,8 +314,8 @@ class ObservationsCfg:
 
         object = ObsTerm(func=mdp.object_obs)
 
-        images_fpv = ObsTerm(func=base_mdp.image, params={"sensor_cfg": SceneEntityCfg("camera_fpv")})
-        images_tpv = ObsTerm(func=base_mdp.image, params={"sensor_cfg": SceneEntityCfg("camera_tpv")})
+        # images_fpv = ObsTerm(func=base_mdp.image, params={"sensor_cfg": SceneEntityCfg("camera_fpv")})
+        # images_tpv = ObsTerm(func=base_mdp.image, params={"sensor_cfg": SceneEntityCfg("camera_tpv")})
 
         def __post_init__(self):
             self.enable_corruption = False
