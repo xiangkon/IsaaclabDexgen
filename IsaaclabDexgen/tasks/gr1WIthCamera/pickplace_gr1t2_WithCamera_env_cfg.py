@@ -114,7 +114,7 @@ class ObjectTableSceneCfg(InteractiveSceneCfg):
         update_period=0.1,
         height=480,
         width=640,
-        data_types=["rgb", "distance_to_image_plane"],
+        data_types=["rgb"],
         spawn=sim_utils.PinholeCameraCfg(
             focal_length=7.0, focus_distance=400.0, horizontal_aperture=20.955, clipping_range=(0.1, 1.0e5)
         ),
@@ -127,7 +127,7 @@ class ObjectTableSceneCfg(InteractiveSceneCfg):
         update_period=0.1,
         height=480,
         width=640,
-        data_types=["rgb", "distance_to_image_plane"],
+        data_types=["rgb"],
         spawn=sim_utils.PinholeCameraCfg(
             focal_length=7.0, focus_distance=400.0, horizontal_aperture=20.955, clipping_range=(0.1, 1.0e5)
         ),
