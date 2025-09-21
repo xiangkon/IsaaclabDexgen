@@ -2,6 +2,7 @@ import h5py
 import numpy as np
 import cv2
 import os
+import argparse
 
 def hdf5_to_video(hdf5_path, output_video_path, fps=30.0, frame_size=(640, 480)):
     """
@@ -40,20 +41,31 @@ def hdf5_to_video(hdf5_path, output_video_path, fps=30.0, frame_size=(640, 480))
     out.release()
     print(f"Video saved to: {output_video_path}")
 
-# 使用示例
-if __name__ == "__main__":
-    # 配置路径 (根据您的实际路径修改)
-    hdf5_path = "data/demo_0/obs/images_fpv.hdf5"  # 实际路径可能需要调整
-    output_video_path = "output_video.mp4"
+def main():
+    parser = argparse.ArgumentParser(description='Convert HDF5 camera data to video')
+    parser.add_argument('--hdf5_path', type=str, help='Input HDF5 file path')
+    parser.add_argument('--output_video_path', type=str, help='Output video file path')
+    parser.add_argument('--fps', type=float, default=30.0, help='Video frame rate (default: 30.0)')
+    parser.add_argument('--frame_size', type=str, default='640x480', 
+                        help='Frame size as "widthxheight" (default: 640x480)')
     
-    # 检查文件是否存在
-    if not os.path.exists(hdf5_path):
-        raise FileNotFoundError(f"HDF5 file not found at: {hdf5_path}")
+    args = parser.parse_args()
+    
+    # 解析帧尺寸
+    width, height = map(int, args.frame_size.split('x'))
+    frame_size = (width, height)
+    
+    # 检查输入文件是否存在
+    if not os.path.exists(args.hdf5_path):
+        raise FileNotFoundError(f"HDF5 file not found at: {args.hdf5_path}")
     
     # 转换并保存视频
     hdf5_to_video(
-        hdf5_path=hdf5_path,
-        output_video_path=output_video_path,
-        fps=30.0,
-        frame_size=(640, 480)  # 与摄像头分辨率匹配
+        hdf5_path=args.hdf5_path,
+        output_video_path=args.output_video_path,
+        fps=args.fps,
+        frame_size=frame_size
     )
+
+if __name__ == "__main__":
+    main()
