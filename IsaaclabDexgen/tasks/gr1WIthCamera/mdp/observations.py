@@ -120,7 +120,6 @@ def get_image_from_camera_fpv(
     Get image from camera sensor
     Args:
         env (ManagerBasedRLEnv): the environment
-        camera_name (str): name of the camera sensor, can be "camera", "camera_head", "camera_fpv", "camera_tpv"
     Returns:
         image (torch.Tensor): image from the camera sensor, shape (B, H, W, 3), range [0, 1]
     """
