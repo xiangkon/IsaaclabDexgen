@@ -1,0 +1,3 @@
+python scripts/generate_dataset.py \
+--headless --num_envs 20 --generation_num_trials 10 --enable_pinocchio \
+--input_file ./datasets/dataset_annotated_gr1.hdf5 --output_file ./datasets/generated_dataset_gr1.hdf5

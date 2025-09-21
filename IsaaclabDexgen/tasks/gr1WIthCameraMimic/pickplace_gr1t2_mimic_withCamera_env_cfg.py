@@ -6,7 +6,7 @@
 from isaaclab.envs.mimic_env_cfg import MimicEnvCfg, SubTaskConfig
 from isaaclab.utils import configclass
 
-from IsaaclabDexgen.tasks.gr1WIthCamera.pickplace_gr1t2_env_cfg import PickPlaceGR1T2EnvCfg
+from IsaaclabDexgen.tasks.gr1WIthCamera.pickplace_gr1t2_WithCamera_env_cfg import PickPlaceGR1T2WithCameraEnvCfg
 
 
 @configclass
