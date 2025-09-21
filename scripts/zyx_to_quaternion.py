@@ -44,6 +44,5 @@ def zyx_euler_to_quaternion(theta_z, phi_y, psi_x, degrees=True):
 
 # 示例：ZYX欧拉角(90°, 0°, 0°)转换为四元数
 if __name__ == "__main__":
-    q = zyx_euler_to_quaternion(theta_z=0, phi_y=-50, psi_x=0)
-    print(f"四元数 (w, x, y, z): {q}")
-    # 输出应为 (0.7071, 0.0, 0.0, 0.7071) 左右（绕Z轴转90°的四元数）
+    q = zyx_euler_to_quaternion(theta_z=-90, phi_y=-30, psi_x=0)
+    print(f"四元数 (x, y, z, w): {q}")

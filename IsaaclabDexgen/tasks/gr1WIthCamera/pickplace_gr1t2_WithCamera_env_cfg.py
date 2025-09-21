@@ -118,9 +118,8 @@ class ObjectTableSceneCfg(InteractiveSceneCfg):
         spawn=sim_utils.PinholeCameraCfg(
             focal_length=24.0, focus_distance=400.0, horizontal_aperture=20.955, clipping_range=(0.1, 1.0e5)
         ),
-        offset=CameraCfg.OffsetCfg(pos=(0.12, 0.0, 0.15), rot=(0.0, -0.4226, 0.0, 0.9063), convention="ros"),
+        offset=CameraCfg.OffsetCfg(pos=(0.12, 0.0, 0.15), rot=(-0.18301270189221933, -0.18301270189221933, -0.6830127018922194, 0.6830127018922194), convention="ros"),
     )
-
 
 ##
 # MDP settings
