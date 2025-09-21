@@ -10,7 +10,7 @@ from IsaaclabDexgen.tasks.gr1WIthCamera.pickplace_gr1t2_WithCamera_env_cfg impor
 
 
 @configclass
-class PickPlaceGR1T2MimicWithCameraEnvCfg(PickPlaceGR1T2EnvCfg, MimicEnvCfg):
+class PickPlaceGR1T2MimicWithCameraEnvCfg(PickPlaceGR1T2WithCameraEnvCfg, MimicEnvCfg):
 
     def __post_init__(self):
         # Calling post init of parents
