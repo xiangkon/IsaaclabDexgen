@@ -118,7 +118,7 @@ class ObjectTableSceneCfg(InteractiveSceneCfg):
         spawn=sim_utils.PinholeCameraCfg(
             focal_length=7.0, focus_distance=400.0, horizontal_aperture=20.955, clipping_range=(0.1, 1.0e5)
         ),
-        offset=CameraCfg.OffsetCfg(pos=(0.12, 0.0, 0.15), rot=(-0.2988362, -0.6408564, 0.704416, 0.0616284), convention="ros"),
+        offset=CameraCfg.OffsetCfg(pos=(0.12, 0.0, 0.15), rot=(0.6408564, 0.704416, 0.0616284, -0.2988362), convention="ros"),
     )
 
 ##
