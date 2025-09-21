@@ -330,7 +330,7 @@ class EventCfg:
 
 
 @configclass
-class PickPlaceGR1T2EnvCfg(ManagerBasedRLEnvCfg):
+class PickPlaceGR1T2WithCameraEnvCfg(ManagerBasedRLEnvCfg):
     """Configuration for the GR1T2 environment."""
 
     # Scene settings

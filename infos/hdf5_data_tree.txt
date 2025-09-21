@@ -1,0 +1,112 @@
+>>> data 的属性:
+   env_args  -->  {"env_name": "Isaac-PickPlace-GR1T2-Abs-Mimic-v0", "type": 2}  (type: str)
+   total  -->  1662  (type: int64)
+
+>>> data/demo_0 的属性:
+   num_samples  -->  295  (type: int64)
+   success  -->  True  (type: bool_)
+
+>>> data/demo_1 的属性:
+   num_samples  -->  340  (type: int64)
+   success  -->  True  (type: bool_)
+
+>>> data/demo_2 的属性:
+   num_samples  -->  349  (type: int64)
+   success  -->  True  (type: bool_)
+
+>>> data/demo_3 的属性:
+   num_samples  -->  322  (type: int64)
+   success  -->  True  (type: bool_)
+
+>>> data/demo_4 的属性:
+   num_samples  -->  356  (type: int64)
+   success  -->  True  (type: bool_)
+
+/
+└── data
+    ├── demo_0
+    │   ├── actions
+    │   │   Shape: (295, 36)
+    │   ├── initial_state
+    │   │   ├── articulation
+    │   │   │   └── robot
+    │   │   │       ├── joint_position
+    │   │   │       │   Shape: (1, 54)
+    │   │   │       ├── joint_velocity
+    │   │   │       │   Shape: (1, 54)
+    │   │   │       ├── root_pose
+    │   │   │       │   Shape: (1, 7)
+    │   │   │       └── root_velocity
+    │   │   │           Shape: (1, 6)
+    │   │   └── rigid_object
+    │   │       └── object
+    │   │           ├── root_pose
+    │   │           │   Shape: (1, 7)
+    │   │           └── root_velocity
+    │   │               Shape: (1, 6)
+    │   ├── obs
+    │   │   ├── actions
+    │   │   │   Shape: (295, 36)
+    │   │   ├── datagen_info
+    │   │   │   ├── eef_pose
+    │   │   │   │   ├── left
+    │   │   │   │   │   Shape: (295, 4, 4)
+    │   │   │   │   └── right
+    │   │   │   │       Shape: (295, 4, 4)
+    │   │   │   ├── object_pose
+    │   │   │   │   └── object
+    │   │   │   │       Shape: (295, 4, 4)
+    │   │   │   ├── subtask_term_signals
+    │   │   │   │   └── idle_right
+    │   │   │   │       Shape: (1, 295)
+    │   │   │   └── target_eef_pose
+    │   │   │       ├── left
+    │   │   │       │   Shape: (295, 4, 4)
+    │   │   │       └── right
+    │   │   │           Shape: (295, 4, 4)
+    │   │   ├── hand_joint_state
+    │   │   │   Shape: (295, 22)
+    │   │   ├── head_joint_state
+    │   │   │   Shape: (295, 3)
+    │   │   ├── left_eef_pos
+    │   │   │   Shape: (295, 3)
+    │   │   ├── left_eef_quat
+    │   │   │   Shape: (295, 4)
+    │   │   ├── object
+    │   │   │   Shape: (295, 13)
+    │   │   ├── object_pos
+    │   │   │   Shape: (295, 3)
+    │   │   ├── object_rot
+    │   │   │   Shape: (295, 4)
+    │   │   ├── right_eef_pos
+    │   │   │   Shape: (295, 3)
+    │   │   ├── right_eef_quat
+    │   │   │   Shape: (295, 4)
+    │   │   ├── robot_joint_pos
+    │   │   │   Shape: (295, 54)
+    │   │   ├── robot_links_state
+    │   │   │   Shape: (295, 55, 13)
+    │   │   ├── robot_root_pos
+    │   │   │   Shape: (295, 3)
+    │   │   └── robot_root_rot
+    │   │       Shape: (295, 4)
+    │   ├── processed_actions
+    │   │   Shape: (295, 36)
+    │   └── states
+    │       ├── articulation
+    │       │   └── robot
+    │       │       ├── joint_position
+    │       │       │   Shape: (295, 54)
+    │       │       ├── joint_velocity
+    │       │       │   Shape: (295, 54)
+    │       │       ├── root_pose
+    │       │       │   Shape: (295, 7)
+    │       │       └── root_velocity
+    │       │           Shape: (295, 6)
+    │       └── rigid_object
+    │           └── object
+    │               ├── root_pose
+    │               │   Shape: (295, 7)
+    │               └── root_velocity
+    │                   Shape: (295, 6)
+
