@@ -21,7 +21,7 @@ def hdf5_to_video(hdf5_path, output_video_path, fps=30.0, frame_size=(640, 480))
     # 读取 HDF5 数据
     with h5py.File(hdf5_path, 'r') as f:
         # 获取摄像头数据 (shape: [steps, height, width, channels])
-        images = f['obs/images_fpv'][:]
+        images = f["data/demo_0/obs/images_fpv"][:]
         
         print(f"Processing {images.shape[0]} frames...")
         
