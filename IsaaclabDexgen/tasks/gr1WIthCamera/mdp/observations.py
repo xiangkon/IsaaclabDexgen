@@ -112,3 +112,19 @@ def get_all_robot_link_state(
     all_robot_link_pos = body_pos_w
 
     return all_robot_link_pos
+
+def get_image_from_camera_fpv(
+    env: ManagerBasedRLEnv,
+) -> torch.Tensor:
+    """
+    Get image from camera sensor
+    Args:
+        env (ManagerBasedRLEnv): the environment
+        camera_name (str): name of the camera sensor, can be "camera", "camera_head", "camera_fpv", "camera_tpv"
+    Returns:
+        image (torch.Tensor): image from the camera sensor, shape (B, H, W, 3), range [0, 1]
+    """
+
+    image = env.scene["camera_fpv"].data.output["rgb"]
+
+    return image / 255.0  # normalize to [0, 1]
